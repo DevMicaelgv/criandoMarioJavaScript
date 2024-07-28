@@ -1,9 +1,27 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+let clickPresionado = 0
+let animacaoAtual = 1.5
 
 
 const jump=()=>{
     mario.classList.add('jump')
+    clickPresionado += 1
+
+    if(clickPresionado == 3){
+       animacaoAtual -= 0.1
+        pipe.style.animation = `pipe-animation ${animacaoAtual}s infinite linear`;
+        clickPresionado = 0
+    
+    }
+    
+
+    
+
+    
+
+    
+    
 
     setTimeout(()=>{
         mario.classList.remove('jump')
